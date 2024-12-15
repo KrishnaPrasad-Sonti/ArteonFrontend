@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './signup.css';
 const apiUrl = import.meta.env.VITE_API_URL;
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -117,7 +118,7 @@ function Signup() {
           <button type="submit" className="signup-btn">SIGN UP</button>
 
           <p className="login-link">
-            Already have an account? <a href="/login">Login</a>
+            Already have an account? <Link to="/login"></Link>Login
           </p>
         </form>
       </div>
