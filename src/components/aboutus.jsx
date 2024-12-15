@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutUs.css';
+import './aboutus.css';
 import { FaPaintBrush, FaUserFriends, FaHistory, FaLightbulb } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
