@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './navbar';  // Assuming Navbar is in the same folder
-import './PageNotFound.css';    // CSS for the Page Not Found page
+import './pagenotfound.css';    // CSS for the Page Not Found page
 import brammi from '../assets/images/pig.jpg';
 
 function PageNotFound() {
