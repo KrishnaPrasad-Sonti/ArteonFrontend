@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import navigate from React Router
 import axios from 'axios';
 import './login.css';
-const apiUrl = import.meta.env.VITE_API_URL ;
+import { Link } from 'react-router-dom'; // Import Link for navigation
+
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -34,7 +36,7 @@ function Login() {
       if (user && user !== 'incorrect_credentials') {
         const userType = user.userType;
 
-        console.log("User type:", userType); 
+        console.log("User type:", user); 
         localStorage.setItem('user', JSON.stringify(user));
 
         // Redirect with user data based on userType
@@ -93,7 +95,7 @@ function Login() {
           {error && <p className="error-message">{error}</p>}
           <button type="submit" className="login-btn">LOGIN</button>
           <p className="signup-link">
-            Don't have an account? <a href="/signup">Sign up</a>
+            Don't have an account? <Link to="/signup">Sign up</Link>
           </p>
         </form>
       </div>
