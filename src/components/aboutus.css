@@ -8,7 +8,7 @@
   border-radius: 10px;
 
   /* Background image properties */
-  background-image: url('D:\JFSD\Project-ARTEON\client\src\assets\images\photo_2024-12-07_23-42-16.jpg'); /* Ensure path is correct */
+  background-image: url('../assets/images/photo_2024-12-07_23-42-16.jpg'); /* Ensure path is correct */
   background-size: cover; /* Ensures the image covers the container */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents image repetition */
