@@ -1,0 +1,119 @@
+.exhibitions-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: flex-start;
+    scroll-behavior: smooth; /* Adds smooth scrolling when navigating */
+  }
+  
+  .slider-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    flex-shrink: 0; /* Prevents shrinking of the cards when scrolled */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slider-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the overlay is above everything else */
+  }
+  
+  .modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    width: 80%;
+    color: white;
+    position: relative;
+    overflow-y: auto; /* Ensures content scrolls if it overflows */
+    z-index: 1100; /* Ensure the content is above the overlay */
+    margin-top: 30vh;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1200; /* Ensure the close button is above everything else */
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .art-card {
+    border-color: rgb(23, 98, 162);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    overflow: hidden; /* Prevent images from spilling over */
+  }
+  
+  .art-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .art-card img:hover {
+    transform: scale(1.05); /* Adds zoom effect to images on hover */
+  }
+  
+  .art-card p {
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-top: 2px solid rgb(23, 98, 162);
+  }
+  
+  /* Adjust gallery layout for responsiveness */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium-sized screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+  }
+  

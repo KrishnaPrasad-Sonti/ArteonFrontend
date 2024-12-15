@@ -1,0 +1,165 @@
+/* Background section styling */
+.mainsect {
+  background-image: url('../assets/images/sulimg.png'); /* Ensure the image path is correct */
+  background-size: cover;
+  background-position: center center; /* Position the image to the center */
+  height: 100vh; /* Full viewport height to cover the entire screen */
+  padding-top: 60px; /* Adjust this based on your navbar height */
+}
+
+/* Form container with transparent glass effect */
+.contact-section {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur the background behind the container */
+  padding: 50px;
+  max-width: 600px;
+  margin: 40px auto;
+  margin-top: 8%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Slightly moved down */
+  animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form header */
+.contact-section h1 {
+  color: #062c52;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels for form inputs */
+label {
+  color: #062c52;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Input and textarea styles */
+input, textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+/* Input focus effect with glowing border */
+input:focus, textarea:focus {
+  border-color: #800020;
+  box-shadow: 0 0 8px rgba(128, 0, 32, 0.5); /* Glowing effect */
+}
+
+/* Textarea adjustments */
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.msgsubmitbtn {
+  background-color: #71aae2;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.msgsubmitbtn:hover {
+  background-color: #e0533b;
+  animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* Button bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Button active state */
+.msgsubmitbtn:active {
+  transform: scale(0.95); /* Shrinks the button slightly */
+  background-color: #800020;
+}
+
+/* Success and error messages */
+.success-message,
+.error-message {
+  font-size: 1rem;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+.success-message {
+  background-color: #d4edda; /* Light green */
+  color: #155724;
+}
+
+.error-message {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24;
+}
+
+/* Fade-in and fade-out animation for messages */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Make the image fit within a 16:9 aspect ratio container */
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Aspect ratio of 16:9 */
+  background-color: #000; /* Optional: adds a background color */
+  margin-bottom: 20px; /* Optional: space below the image */
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  object-position: center; /* Ensures the center of the image is focused */
+}

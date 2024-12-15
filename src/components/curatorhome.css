@@ -1,0 +1,129 @@
+.curatorhome{
+   
+    background-image: url('../assets/images/greensky.jpg');
+    background-size:cover;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the image fixed during scrolling */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Ensures that all elements inside align correctly */
+
+}
+.curatorhomenav{
+    width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 60px;
+  z-index: 100;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+.curatorhomenav h1{
+    font-size: 2rem;
+    
+    font-family: 'Aclonica', sans-serif;
+    color: rgb(11, 196, 106);
+}
+.main-frame h2{
+    padding-top: 2rem;
+}
+/* Sidebar (Dashboard) */
+.cdashboard {
+    position: fixed;
+    margin-top: 30px;
+    top: 80px; /* Below the navbar (assuming navbar height is 80px) */
+    left: 0;
+    width: 15px;
+    height: 100%; /* Full height for the sidebar */
+    background-color: rgba(7, 188, 110, 0.9);
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 99;
+    border-color: white;
+  }
+  
+  /* Show sidebar on hover */
+  .cdashboard:hover {
+    width: 300px;
+  }
+  
+  /* Dashboard links */
+  .cdashboard ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .cdashboard ul li {
+    width: 100%;
+  }
+  
+  .cdashboard ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for sidebar links */
+  .cdashboard ul li a:hover {
+    background-color: #037e51;
+  }
+  
+
+  .cfab-sign-out {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #036f46;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cfab-sign-out:hover {
+    background-color: #06dd8a;
+    animation: bounce 0.5s ease-in-out infinite;
+  }
+  .cfab-sign-out .signout-text {
+    display: none; /* Initially hidden */
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 70px; /* Adjust to position text above the button */
+    right: 50%; /* Center horizontally */
+    transform: translateX(50%); /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  }
+  
+  /* Show the sign-out text when hovering the button */
+  .cfab-sign-out:hover .signout-text {
+    display: block;
+  }

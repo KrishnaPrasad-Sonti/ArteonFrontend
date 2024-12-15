@@ -1,0 +1,19 @@
+.curatorclosebutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #07a561;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+  
+  .curatorclosebutton:hover {
+    background-color: #3ed168;
+    color: #000000;
+  }

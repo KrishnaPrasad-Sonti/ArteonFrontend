@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.login-container {
+  display: flex;
+ min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./src/assets/images/loginimg.jpg'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 20px; /* Add space between the two boxes */
+}
+
+.login-welcome{
+  background-color: transparent; /* Slight transparent white background */
+  color: white;
+  padding: 40px 30px; /* Adjusted padding */
+  width: 40%;
+  height: 40vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(1px); /* Glass effect with stronger blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+.login-form-section {
+  background: rgba(255, 255, 255, 0.2); /* Translucent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass effect for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+  border-radius: 10px; /* Rounded corners */
+  width: 30%; /* Medium size for both boxes */
+  aspect-ratio: 1; /* Maintain consistent ratio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+  padding: 30px; /* Padding for box contents */
+}
+
+
+.login-welcome {
+  justify-content: center; /* Center-align contents */
+}
+
+.login-welcome h1 {
+  font-size: 2.5rem; /* Smaller heading */
+  margin-bottom: 15px;
+  color: #062c52; /* Blue text */
+}
+
+.login-welcome h1:nth-child(4) {
+  font-weight: bold;
+  font-size: 2.2rem; /* Smaller size for emphasis */
+  color: #062c52; /* Blue text */
+}
+
+.login-form-section {
+  justify-content: flex-start; /* Align content to the top */
+}
+
+.login-heading {
+  font-size: 1.5rem; /* Smaller font for the heading */
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  color: #062c52; /* Blue text */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+.login-form-section label{
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #062c52; /* Blue text */
+}
+
+.login-form-section input {
+  width: 100%;
+  padding: 10px; /* Reduced padding for inputs */
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle border */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8); /* Cement-white input background */
+  color: #000000; /* Black text inside input */
+}
+
+.login-form-section input::placeholder {
+  color: black; /* Black text for placeholder */
+}
+
+input:focus {
+  outline: none;
+  border-color: #062c52; /* Blue border on focus */
+}
+
+.login-btn {
+  background-color: #062c52; /* Blue button */
+  color: white; /* White text */
+  padding: 12px; /* Reduced padding for button */
+  width: 100%;
+  font-size: 1rem; /* Smaller button font */
+  font-weight: 700;
+  border: 2px solid #062c52; /* Blue border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.login-btn:hover {
+  background-color: transparent; /* Transparent background on hover */
+  color: #062c52; /* Blue text on hover */
+  border-color: #00bfff; /* Sky blue neon border on hover */
+  box-shadow: 0 0 10px 4px rgba(0, 191, 255, 0.7); /* Sky blue glowing effect */
+}
+
+.signup-link {
+  margin-top: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.signup-link a {
+  color: #062c52; /* Blue link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #062c52; /* Blue error message */
+  font-size: 14px;
+  margin-top: 10px;
+}
+

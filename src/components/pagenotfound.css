@@ -1,0 +1,41 @@
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+  }
+  
+  .not-found-image {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-family: 'Aclonica', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .home-link {
+    padding: 10px 20px;
+    background-color: #062c52; /* Dark blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Aboreto', sans-serif;
+  }
+  
+  .home-link:hover {
+    background-color: #800020; /* Burgundy hover */
+  }
+  

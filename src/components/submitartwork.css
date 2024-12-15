@@ -1,0 +1,116 @@
+/* General Styles */
+.submit-art-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .submit-art-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .closebutton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #f9f9f9;
+    cursor: pointer;
+    background-color: black;
+    
+  }
+  
+  .closebutton:hover {
+    color: #000000;
+    background-color: rgb(10, 227, 247);
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-group input[type="file"] {
+    padding: 0;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 12px;
+  }
+  
+  .success-message,
+  .error-message {
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Button Styles */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Image Preview */
+  .form-group img {
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+  

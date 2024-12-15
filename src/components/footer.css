@@ -1,0 +1,76 @@
+/* Ensure the footer takes up the entire viewport height */
+footer {
+  background-color: #062c52;
+  color: white;
+  padding: 3rem 5rem;
+  font-size: 1rem;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header section styles */
+footer h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer a:hover {
+  color: #00FFAB;
+  background-color: #002F25; /* Optional background highlight */
+  border-radius: 4px; /* Rounded corners for background */
+  padding: 0.2rem 0.4rem; /* Padding for better visibility */
+}
+
+/* Top section layout */
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Bottom section alignment */
+footer .footer-bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  font-size: 0.75rem;
+}
+
+footer .footer-bottom a {
+  margin-left: 1rem;
+}
+
+/* Social icons */
+footer .footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .footer-socials a i {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+body {
+  font-family: Arial, sans-serif;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;    /* blue background   bargandi- #800020 --   blue- 062c52 --  white #EAD8B1 */ 
+
+  
+}
+
+.App {
+  text-align: center;
+}

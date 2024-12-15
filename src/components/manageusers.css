@@ -1,0 +1,322 @@
+.manage-users {
+    margin: 20px;
+  }
+  
+  .user-counts {
+    display: flex;
+    justify-content: space-around; /* Centering cards horizontally */
+    gap: 20px; /* Consistent gap between cards */
+    padding-top: 60px;
+  }
+  
+  .admincard {
+    cursor: pointer; /* Indicate that the cards are clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom effect */
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #98EECC;
+  }
+  
+  .admincard:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .admincard:active {
+    transform: scale(1.05); /* Slight zoom effect when clicked */
+  }
+  
+  .artistcard {
+    cursor: pointer; /* Indicate that the cards are clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom effect */
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #9DD6DF;
+  }
+  
+  .artistcard:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .artistcard:active {
+    transform: scale(1.05); /* Slight zoom effect when clicked */
+  }
+  
+  .curatorcard {
+    cursor: pointer; /* Indicate that the cards are clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom effect */
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #C88EA7;
+  }
+  
+  .curatorcard:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .curatorcard:active {
+    transform: scale(1.05); /* Slight zoom effect when clicked */
+  }
+  
+  .visitorcard {
+    cursor: pointer; /* Indicate that the cards are clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom effect */
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #A084CF;
+  }
+  
+  .visitorcard:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .visitorcard:active {
+    transform: scale(1.05); /* Slight zoom effect when clicked */
+  }
+  
+  
+  h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+
+  .manage-users-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .role-counts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 40px;
+  }
+  
+  .user-list-container {
+    flex-grow: 1;
+  }
+  
+
+  .users-table {
+    width: 100%; /* Full width for better visibility */
+    border-collapse: separate; /* Separate borders for spacing */
+    border-spacing: 0 10px; /* Adds spacing between rows */
+    margin-top: 20px;
+    margin-left: 2px;
+    background-color: #f9f9f9; /* Light background for the table */
+  }
+  
+  .users-table th {
+    background-color: #0554a8; /* Header background color */
+    color: white; /* Header text color */
+    text-align: left; /* Align header text to the left */
+    padding: 10px; /* Add padding for header cells */
+    font-size: 16px;
+    border-bottom: 2px solid #ddd; /* Subtle border below header */
+  }
+  
+  .users-table td {
+    padding: 15px; /* Padding inside table cells */
+    font-size: 14px;
+    text-align: left; /* Align text to the left */
+    background-color: #ffffff; /* White background for cells */
+    border-bottom: 1px solid #ddd; /* Subtle border below each row */
+    border-right: 1px solid #ddd; /* Subtle border between columns */
+  }
+  
+  .users-table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+  }
+  
+  .table-cell img.profile-image {
+    width: 40px; /* Fixed width for images */
+    height: 40px; /* Fixed height for images */
+    border-radius: 50%; /* Circular profile images */
+    object-fit: cover; /* Ensure image fits without distortion */
+  }
+  
+  .role-select {
+    padding: 5px; /* Add padding to dropdown */
+    font-size: 14px;
+    border: 1px solid #ccc; /* Border for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+  }
+  
+  .force-update-btn, .delete-btn {
+    padding: 5px 10px; /* Padding for buttons */
+    font-size: 14px;
+    color: white;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .force-update-btn {
+    background-color: #4CAF50; /* Green background for update button */
+  }
+  
+  .delete-btn {
+    background-color: #f44336; /* Red background for delete button */
+  }
+  
+  .force-update-btn:hover, .delete-btn:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+  }
+  
+  .delete-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Styles for the delete popup */
+.delete-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content styling */
+.popup-content {
+  background-color: rgb(173, 140, 213); /* Purple background for the box */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+.popup-content h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Paragraph styling */
+.popup-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Yes button (red color) */
+.yes-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* No button (green color) */
+.no-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Hover effects for buttons */
+.yes-btn:hover {
+  background-color: darkred;
+}
+
+.no-btn:hover {
+  background-color: darkgreen;
+}
+.manage-users-container {
+  position: relative; /* To position the close button relative to this container */
+}
+
+.adminclosebutton {
+  position: absolute;
+  top: 10px; /* Adjust this value for the distance from the top */
+  right: 10px; /* Adjust this value for the distance from the right */
+  background-color:white;
+  width: 19px;
+  border: none;
+  font-size: 24px; /* Size of the X button */
+  color: #b81a1a; /* Color of the X button */
+
+  cursor: pointer;
+}
+
+.adminclosebutton:hover {
+  color: red; /* Change color on hover (optional) */
+  background-color: black;
+}
+
+.manage-users-container {
+  position: relative; /* To position the close button relative to this container */
+}
+
+.closebutton {
+  position: absolute;
+  top: 10px; /* Adjust this value for the distance from the top */
+  right: 10px; /* Adjust this value for the distance from the right */
+  background-color: transparent;
+  border: none;
+  font-size: 24px; /* Size of the X button */
+  color: #000; /* Color of the X button */
+  cursor: pointer;
+  width: 30px;
+}
+
+.closebutton:hover {
+  color: rgb(253, 253, 253); /* Change color on hover (optional) */
+  background-color: red;
+   
+}

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+ 
+  height: 100vh;
+}
+
+.signup-container {
+  background-image: url('./src/assets/images/ba99ed1e-2a0f-4657-b728-27f7ffb7d40b.jpeg'); /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: auto; /* Set minimum height */
+ 
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Space between the two sections */
+  padding: 90px;
+}
+
+.signup-welcome {
+  background-color: transparent; /* Slight transparent white background */
+  color: white;
+  padding: 40px 30px; /* Adjusted padding */
+  width: 40%;
+  height: 40vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(1px); /* Glass effect with stronger blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.signup-welcome h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #062c52;
+}
+
+.signup-welcome h1:nth-child(4) {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #062c52;
+}
+
+.signup-form-section {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight transparent white background */
+  padding: 40px 30px;
+  width: 40%;
+  height: 80vh;
+  border-radius: 10px; /* Make form rounded */
+  box-shadow: 0 4px 10px rgba(3, 0, 0, 0.1); /* Soft shadow for form */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px); /* Glass effect with stronger blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.signup-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #062c52;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #062c52;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #062c52;
+}
+
+.signup-btn {
+  background-color: #062c52;  /* Dark base color */
+  color: white;
+  padding: 15px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: transparent; /* Transparent background on hover */
+  color: #062c52; /* Blue text on hover */
+  border-color: #00bfff; /* Sky blue neon border on hover */
+  box-shadow: 0 0 10px 4px rgba(0, 191, 255, 0.7); /* Sky blue glowing effect */
+}
+
+.login-link {
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}
+
+.login-link a {
+  color: #062c52;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Success Message Styling */
+.success-message {
+  position: fixed;
+  top: 70px; /* Adjust the vertical positioning */
+  right: 20px; /* Align it to the right side */
+  background-color: #4CAF50;  /* Green background */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #f44336;  /* Red background */
+  color: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}

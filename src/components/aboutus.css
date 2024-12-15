@@ -1,0 +1,154 @@
+/* Main container */
+.about-us {
+  text-align: center;
+  padding: 45px;
+  margin: 0px;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #000000; /* Changed cement text color to black */
+  border-radius: 10px;
+
+  /* Background image properties */
+  background-image: url('D:\JFSD\Project-ARTEON\client\src\assets\images\photo_2024-12-07_23-42-16.jpg'); /* Ensure path is correct */
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  
+  animation: slideUp 1.2s ease-in-out; /* Slide-up animation */
+}
+
+/* Intro Section */
+.intro-section {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #062c52; /* Changed red to teal */
+  animation: fadeIn 0.8s ease-in forwards;
+  margin-top: 5vh;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #000000; /* Changed cement text color to black */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.highlight {
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 13vh;
+  flex-wrap: wrap;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.8s ease-in forwards;
+  animation-delay: 0.8s;
+}
+
+.feature {
+  flex: 1 1 200px;
+  margin: 20px;
+  padding: 20px;
+  
+  /* Transparent Background with Blur */
+  background: rgba(255, 255, 255, 0.1); /* Makes it transparent */
+  backdrop-filter: blur(1px); /* Blurs the background content */
+  -webkit-backdrop-filter: blur(10px); /* Ensures compatibility for Safari */
+  
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  
+  transform: scale(0.9); /* Start with smaller scale */
+  opacity: 0; /* Initially hidden */
+  animation: scaleIn 0.8s ease-out forwards;
+  animation-delay: calc(var(--feature-order, 0) * 0.2s); /* Staggered animation for features */
+}
+
+.feature p{
+  color: #000000;
+}
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+/* Call-to-action Section */
+.call-to-action {
+  margin-top: 40px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1.2s ease-in forwards;
+  animation-delay: 1s;
+}
+
+.explore-button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #0a58ca;
+  transform: scale(1.1); /* Scale button on hover */
+  animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

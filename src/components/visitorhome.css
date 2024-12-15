@@ -1,0 +1,198 @@
+
+
+.visitor-home{
+
+    background-image: url('../assets/images/curaothome2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensures that all elements inside align correctly */
+}
+.visitor-nav{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 60px;
+    z-index: 100;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  /* Logo styling */
+  .visitor-nav h1 {
+    color: #7908a2;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Aclonica', sans-serif;
+  }
+
+
+/* Active section styling */
+
+
+.fab-sign-out:hover {
+    background-color: #b22222; /* Red on hover */
+}
+
+
+.main-frame h2{
+    color: black;
+
+}
+
+.visdashboard {
+    position: fixed;
+    margin-top: 30px;
+    top: 80px; /* Below the navbar (assuming navbar height is 80px) */
+    left: 0;
+    width: 15px;
+    height: 100%; /* Full height for the sidebar */
+    background-color: rgba(157, 15, 188, 0.9);
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 99;
+  }
+  
+  /* Show sidebar on hover */
+  .visdashboard:hover {
+    width: 300px;
+  }
+  .visdashboard ul li a:hover {
+    background-color: #7908a2;
+  }
+  /* Dashboard links */
+  .visdashboard ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .visdashboard ul li {
+    width: 100%;
+  }
+  
+  .visdashboard ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for sidebar links */
+  
+  
+  /* Sign-out button styling */
+  /* Style for the sign-out button */
+  .vfab-sign-out {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #710a9a;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: none;
+  }
+  
+  /* Hover effect for the sign-out button */
+  .vfab-sign-out:hover {
+    background-color: #000000;
+    animation: bounce 0.5s ease-in-out infinite;
+    color: #710a9a;
+  }
+  
+  /* Style for the sign-out text */
+  .vfab-sign-out .signout-text {
+    display: none; /* Initially hidden */
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 70px; /* Adjust to position text above the button */
+    right: 50%; /* Center horizontally */
+    transform: translateX(50%); /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  }
+  
+  /* Show the sign-out text when hovering the button */
+  .vfab-sign-out:hover .signout-text {
+    display: block;
+  }
+  
+  /* Section styling: Initially hidden, will become visible when active */
+  .section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    position: absolute;
+    top: 110px; /* Adjust to match navbar height */
+    left: 200px; /* Space from the sidebar */
+    right: 80px; /* Margin on the right */
+    padding: 20px;
+    min-height: 400px; /* Adjust height as needed */
+    border-radius: 15px; /* Rounded corners for the glass effect */
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  }
+  
+  /* Active section styling */
+  .section.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Adjust main-frame margin when sidebar is hovered */
+  .visdashboard:hover ~ .main-frame {
+    margin-left: 250px;
+  }
+  
+  .visclosebutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d34dff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+  
+  .visclosebutton:hover {
+    background-color: #d51aff;
+    color: black;
+  }

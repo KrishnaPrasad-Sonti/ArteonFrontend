@@ -1,0 +1,50 @@
+.exhibition-section {
+    padding: 40px;
+    margin-top: 10%;
+    background-color: #f4f4f4; /* Light background for a modern look */
+  }
+  
+  .exhibition-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Spacing between the gallery items */
+  }
+  
+  .gallery-item {
+    
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+  }
+  
+  .gallery-item img {
+    width: 80vh;
+    height: 50vh;
+    display: block;
+    border-bottom: 2px solid #34495e;
+  }
+  
+  .gallery-item p {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #34495e;
+    font-family: 'Arial', sans-serif;
+  }
+  

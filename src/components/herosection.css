@@ -1,0 +1,152 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: auto; /* Allow height to adjust to content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUpPage 0.5s ease-in-out; /* Page slide-up animation */
+  opacity: 0;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes slideUpPage {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-text {
+  position: absolute;
+  top: 51%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  background: transparent; /* Semi-transparent background */
+  border-radius: 12px;
+  z-index: 2;
+  opacity: 0;
+  animation: slideUpText 0.6s ease-in-out 1s; /* Text slide-up animation with delay */
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUpText {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  font-family: 'Aclonica', sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+
+}
+
+.hbut-btn {
+  color: #0d6efd;
+}
+
+
+
+/* Center the hero-info and its content */
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto; /* Center horizontally */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-info .info-title h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-info .info-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Explore Art button styling */
+.hbtn-login {
+  background-color: #29c1f2; /* Sky blue */
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-family: 'Aclonica', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hbtn-login:hover {
+  background-color: #5bb2d7; /* Slightly darker blue on hover */
+  animation: bounce 0.5s ease-in-out infinite;
+  transform: scale(1.05);
+}
+.cta-section h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #800020;
+  color: #EAD8B1;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #29c1f2;
+  color: #000000;
+  transform: scale(1.05);
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

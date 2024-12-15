@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.navbar {
+  width: 100%;
+  background-color:transparent; /* Default: Transparent */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 60px;
+  z-index: 100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #ffffff; /* Background when scrolled */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.navbar-brand {
+  color: #000000; /* Brand text color */
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 40px;
+  padding-left: 10px;
+  font-family: 'Aboreto', sans-serif;
+  font-weight: bold;
+}
+
+.navbar.scrolled .navbar-links a {
+  color: #000000; /* Ensure links are visible on white background */
+}
