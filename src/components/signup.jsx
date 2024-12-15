@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './signup.css';
 const apiUrl = import.meta.env.VITE_API_URL;
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -13,6 +13,7 @@ function Signup() {
   });
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleChange = (e) => {
     setFormData({
@@ -32,7 +33,6 @@ function Signup() {
   
     try {
       const response = await axios.post(`${apiUrl}/Arteon/signup`, {
-        
         username: formData.username,
         email: formData.email,
         password: formData.password
@@ -43,18 +43,16 @@ function Signup() {
       setError(null);  // Reset error
       setFormData({ username: '', email: '', password: '', confirmPassword: '' }); // Clear form fields
   
-      // Redirect to login after 2 seconds
+      // Redirect to login using React Router's navigate function
       setTimeout(() => {
-        window.location.href = '/login';
+        navigate('/login'); // Navigate to login page
       }, 2000);  // Adjust delay as needed
   
-    } 
-    catch (err) {
+    } catch (err) {
       setError(err.response ? err.response.data : "Error signing up. Please try again.");
       setSuccess(null);  // Reset success
     }
   };
-
 
   return (
     <div className="signup-container">
