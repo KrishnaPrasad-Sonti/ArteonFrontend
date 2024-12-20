@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .navbar {
   width: 100%;
-  background-color:transparent; /* Default: Transparent */
+  background-color: transparent; /* Default background */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,26 +22,102 @@
 
 .navbar-brand {
   color: #000000; /* Brand text color */
-  font-size: 32px;
+  font-size: 2rem; /* Use relative font size for better responsiveness */
   font-weight: bold;
   font-family: 'Aclonica', sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #0d6efd; /* Hover effect for brand name */
 }
 
 .navbar-links {
-  list-style-type: none;
-  display: flex;
+  list-style: none; 
+  display: flex; 
+  gap: 25px; /* Gap between links for better alignment */
+}
+
+.navbar-links li {
+  display: inline-block;
 }
 
 .navbar-links a {
   color: #000000;
   text-decoration: none;
-  font-size: 18px;
-  padding-right: 40px;
-  padding-left: 10px;
+  font-size: 1rem; /* Relative font size for better responsiveness */
+  padding: 10px 15px; 
   font-family: 'Aboreto', sans-serif;
   font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #0d6efd; /* Change link color on hover */
+  transform: translateY(-5px); /* Subtle lift on hover */
 }
 
 .navbar.scrolled .navbar-links a {
-  color: #000000; /* Ensure links are visible on white background */
+  color: #000000; /* Ensure links remain visible on scrolled navbar */
+}
+
+.navbar-links a.active {
+  border-bottom: 3px solid #0d6efd; /* Indicate active link */
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem; 
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 0.95rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; 
+  }
+
+  .navbar-links {
+    gap: 15px;
+  }
+
+  .navbar-links a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem; 
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stacks links vertically */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-links a {
+    font-size: 0.85rem; 
+  }
 }
