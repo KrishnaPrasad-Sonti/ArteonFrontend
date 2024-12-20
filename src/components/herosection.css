@@ -1,3 +1,4 @@
+/* Base Styles (applies to larger screens) */
 .hero-section {
   position: relative;
   width: 100%;
@@ -8,123 +9,56 @@
   animation: slideUpPage 0.5s ease-in-out; /* Page slide-up animation */
   opacity: 0;
   animation-fill-mode: forwards;
-  
-}
-
-@keyframes slideUpPage {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .hero-text {
   position: absolute;
-  top: 51%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
   text-align: center;
   max-width: 800px;
   padding: 20px;
-  background: transparent; /* Semi-transparent background */
   border-radius: 12px;
   z-index: 2;
   opacity: 0;
-  animation: slideUpText 0.6s ease-in-out 1s; /* Text slide-up animation with delay */
+  animation: slideUpText 0.6s ease-in-out 1s; 
   animation-fill-mode: forwards;
-}
-
-@keyframes slideUpText {
-  from {
-    transform: translateY(40%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .hero-text h2 {
   font-size: 2.8rem;
-  font-family: 'Aclonica', sans-serif;
-  color: #ffffff;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
-
 }
 
-.hbut-btn {
-  color: #0d6efd;
+.hbtn-login {
+  background-color: #29c1f2;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
-
-
-/* Center the hero-info and its content */
 .hero-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   width: 80%;
-  margin: 20px auto; /* Center horizontally */
+  margin: 20px auto;
   padding: 20px;
-  background-color: #f9f9f9; /* Light background */
+  background-color: #f9f9f9;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-info .info-title h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.hero-info .info-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Explore Art button styling */
-.hbtn-login {
-  background-color: #29c1f2; /* Sky blue */
-  color: #000000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  font-family: 'Aclonica', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.hbtn-login:hover {
-  background-color: #5bb2d7; /* Slightly darker blue on hover */
-  animation: bounce 0.5s ease-in-out infinite;
-  transform: scale(1.05);
-}
-.cta-section h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-
-
-.cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.cta-section {
+  text-align: center;
 }
 
 .cta-button {
@@ -133,20 +67,186 @@
   padding: 12px 24px;
   border-radius: 20px;
   font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #29c1f2;
-  color: #000000;
-  transform: scale(1.05);
-}
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+/* 
+-----------------------------------------------
+Responsive Styles for Each Breakpoint 
+-----------------------------------------------
+*/
+
+/* 320px — Mobile Portrait */
+@media (max-width: 320px) {
+  .hero-text h2 {
+    font-size: 1.8rem;
+    padding: 10px;
   }
-  50% {
-    transform: translateY(-5px);
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .hbtn-login {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .hero-info {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .hero-info .info-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* 480px — Mobile Landscape */
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    height: 350px;
+  }
+
+  .hbtn-login {
+    font-size: 1.1rem;
+  }
+
+  .hero-info {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .hero-info .info-title h3 {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+}
+
+/* 600px — Small Tablet */
+@media (max-width: 600px) {
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image img {
+    height: 400px;
+  }
+
+  .hbtn-login {
+    font-size: 1.2rem;
+  }
+
+  .hero-info {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .hero-info .info-title h3 {
+    font-size: 1.9rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}
+
+/* 768px — Tablet Portrait */
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-image img {
+    height: 450px;
+  }
+
+  .hbtn-login {
+    font-size: 1.2rem;
+  }
+
+  .hero-info {
+    width: 75%;
+    padding: 25px;
+  }
+
+  .hero-info .info-title h3 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 12px 26px;
+    font-size: 18px;
+  }
+}
+
+/* 1024px — Tablet Landscape / Netbook */
+@media (max-width: 1024px) {
+  .hero-text h2 {
+    font-size: 2.6rem;
+  }
+
+  .hero-image img {
+    height: 500px;
+  }
+
+  .hbtn-login {
+    font-size: 1.2rem;
+  }
+
+  .hero-info {
+    width: 70%;
+    padding: 30px;
+  }
+
+  .hero-info .info-title h3 {
+    font-size: 2.2rem;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+}
+
+/* 1280px — Desktop */
+@media (max-width: 1280px) {
+  .hero-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero-image img {
+    height: 550px;
+  }
+
+  .hbtn-login {
+    font-size: 1.2rem;
+  }
+
+  .hero-info {
+    width: 65%;
+    padding: 40px;
+  }
+
+  .hero-info .info-title h3 {
+    font-size: 2.4rem;
+  }
+
+  .cta-button {
+    padding: 16px 32px;
+    font-size: 20px;
   }
 }
